@@ -41,19 +41,19 @@ pub enum Direction {
 impl Direction {
     fn left(&mut self) {
         *self = match *self {
-            Self::North => Self::West,
-            Self::East => Self::North,
-            Self::South => Self::East,
-            Self::West => Self::South,
+            Direction::North => Direction::West,
+            Direction::East => Direction::North,
+            Direction::South => Direction::East,
+            Direction::West => Direction::South,
         }
     }
 
     fn right(&mut self) {
         *self = match *self {
-            Self::North => Self::East,
-            Self::East => Self::South,
-            Self::South => Self::West,
-            Self::West => Self::North,
+            Direction::North => Direction::East,
+            Direction::East => Direction::South,
+            Direction::South => Direction::West,
+            Direction::West => Direction::North,
         }
     }
 }
