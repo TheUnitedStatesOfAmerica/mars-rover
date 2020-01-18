@@ -47,3 +47,10 @@ Position { x: 5, y: 1 }
 East
 test test_rover_init ... ok
 ```
+
+Expected output:
+
+```
+1 3 N
+5 1 E
+```
