@@ -95,10 +95,7 @@ impl Rover {
     /// Takes the second line of input following the 'LMR' format
     /// Invalid input not accounted for, that should be filtered by the implementation of what runs the rover, this is just meant to parse
     pub fn run_to_end(&mut self, input: &str) -> Result<(), Box<dyn Error>> {
-        let commands = input
-            .chars()
-            .map(|c: char| map_to_command(c))
-            .collect::<Vec<_>>();
+        let commands = input.chars().map(map_to_command).collect::<Vec<_>>();
         for command in commands {
             match command? {
                 Command::Left => self.direction.left(),
